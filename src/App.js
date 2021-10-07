@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import History from './History.js'
+import Button from './Button.js';
 
 const App = () => {
 
@@ -21,12 +22,8 @@ const App = () => {
   return (
     <div className="App">
       {left}
-      <button onClick={ () => handleLeftClick()}> 
-        left
-      </button>
-      <button onClick={ () => handleRightClick()}> 
-        right
-      </button>
+      <Button handleClick={handleLeftClick} text='left' />
+      <Button handleClick={handleRightClick} text='right' />
       {right}
       <History allClicks={allClicks} />
     </div>
