@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
+import History from './History.js'
 
 const App = () => {
 
@@ -27,7 +28,7 @@ const App = () => {
         right
       </button>
       {right}
-      <p>{allClicks.join(' ')}</p>
+      <History allClicks={allClicks} />
     </div>
   );
 }
